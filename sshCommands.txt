@@ -19,3 +19,10 @@ ssh-add
 
 Here’s an alias you can put in your .bashrc, to simplify it
 alias ssha='eval $(ssh-agent) && ssh-add'
+
+
+ansible all -m apt -a update_cache=true --become --ask-become-pass
+
+ansible all -m apt -a upgrade=dist --become --ask-become-passxx
+
+ansible-playbook --ask-become-pass UpdateOS.yml
